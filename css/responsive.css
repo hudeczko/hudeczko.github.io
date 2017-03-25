@@ -1,0 +1,160 @@
+/*
+Small devices, Greater than 992px
+=====================================*/
+
+@media screen and (max-width: 992px) {
+
+  /*
+  Global Styles
+  ===========================*/
+
+  /* Override Bootstrap Styles */
+
+  .navbar-default .navbar-brand,
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-default .navbar-nav>li {
+    margin-left: 10px;
+  }
+
+  /* Buttons */
+
+  .cta-nav-btn {
+    padding: 10px 15px;
+  }
+
+}
+
+
+/*
+Extra small devices, Less than 768px
+=====================================*/
+
+@media screen and (max-width: 768px) {
+
+  /*
+  Global Styles
+  ===========================*/
+
+  /* Typography */
+
+  h1 {
+    font-size: 250%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  h3 {
+    font-size: 130%;
+  }
+
+  h6 {
+    font-size: 110%;
+  }
+
+
+  /* Override Bootstrap Styles */
+
+  .navbar-default .navbar-brand,
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    padding-left: 10px;
+  }
+
+
+  /* Buttons */
+  .cta-btn:link,
+  .cta-btn:visited,
+  .cta-btn:hover,
+  .cta-btn:active {
+    padding: 15px 15px;
+  }
+
+  /*
+  Section: About Us
+  ===========================*/
+
+  .section-about .row:first-of-type p {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .section-about .row:last-of-type div {
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+    padding: 2% 5%;
+  }
+
+  .section-about .row:last-of-type div:last-of-type {
+    margin-bottom: 0;
+  }
+
+
+  /*
+  Section: Services
+  ===========================*/
+
+  .section-services-one .row:first-of-type p {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .section-services-one .row:last-of-type div {
+    width: 100%;
+    float: left;
+    padding: 2% 5%;
+    margin-bottom: 50px;
+  }
+
+  .section-services-one .row:last-of-type div:last-of-type {
+    margin-bottom: 0;
+  }
+
+
+  .section-services-two .row:first-of-type p {
+    padding: 0 5%;
+    width: 100%;
+  }
+
+  .section-services-two .row:last-of-type div {
+    width: 100%;
+    float: left;
+    padding: 2% 5%;
+    margin-bottom: 50px;
+  }
+
+  .section-services-two .row:last-of-type div:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /*
+  Section: footer
+  =====================================*/
+
+  footer ul {
+    font-size: 80%;
+    float: left;
+    width: 45%;
+    margin: 0 2.5%;
+    padding: 0;
+  }
+
+  footer .row:last-child {
+    font-size: 80%;
+  }
+
+  footer .navbar-brand {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+}
