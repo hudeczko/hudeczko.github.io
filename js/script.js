@@ -74,50 +74,31 @@ $(document).ready(function(){
     /* Segment Analytics API
     =====================================*/
 
-    var navGetInTouchButton = document.getElementById('nav-get-in-touch-btn');
-    var getInTouchButton = document.getElementById('get-in-touch-btn');
-    var learnMoreButton = document.getElementById('learn-more-btn');
-    var navAboutUs = document.getElementById('about-us');
-    var navServices = document.getElementById('services');
-    var navContact = document.getElementById('contact');
-    var formSendButton = document.getElementById('form-send-button');
+    var elementsToTrack = {
+      'nav-get-in-touch-btn': { 'event': 'Nav Get In Touch Button', 'description': 'Clicked nav get in touch button' },
+      'get-in-touch-btn': { 'event': 'Body Get In Touch Button', 'description': 'Clicked body get in touch Button' },
+      'learn-more-btn': { 'event': 'Learn More Button', 'description': 'Clicked learn more Button' },
+      'about-us': { 'event': 'About Us', 'description': 'Clicked about us link in menu' },
+      'services': { 'event': 'Services', 'description': 'Clicked services link in menu' },
+      'contact': { 'event': 'Contact', 'description': 'Clicked contact link in menu' },
+      'form-send-button': { 'event': 'Form Button', 'description': 'Clicked send button in form' }
+    };
 
+    Object.keys(elementsToTrack).forEach(function(key) {
+      var element = document.getElementById(key);
+      var track = elementsToTrack[key];
 
-    navGetInTouchButton.addEventListener("click", analytics.track('Clicked Nav Get In Touch Button', {
-      description: 'Clicked nav get in touch button'
-    }));
-
-    getInTouchButton.addEventListener("click", analytics.track('Clicked Body Get In Touch Button', {
-      description: 'Clicked body get in touch Button'
-    }));
-
-    learnMoreButton.addEventListener("click", analytics.track('Clicked Learn More Button', {
-      description: 'Clicked learn more Button'
-    }));
-
-    navAboutUs.addEventListener("click", analytics.track('Clicked About Us', {
-      description: 'Clicked about us link in menu'
-    }));
-
-    navServices.addEventListener("click", analytics.track('Clicked Services', {
-      description: 'Clicked services link in menu'
-    }));
-
-    navContact.addEventListener("click", analytics.track('Clicked contact', {
-      description: 'Clicked contact link in menu'
-    }));
-
-    formSendButton.addEventListener("click", analytics.track('Clicked Form Button', {
-      description: 'Clicked send button in form'
-    }));
+      console.log('Registering event listener for ' + key);
+      element.addEventListener("click", function() {
+        console.log('Track event for ' + key);
+        analytics.track(track['event'], { description: track['description'] });
+      }, false);
+    });
 
     for(var i=1; i <= 20; i++) {
       var imageCarousel = document.getElementById('carousel-image-' + i);
-      imageCarousel.addEventListener("click", analytics.track('Clicked Carousel Image', {
-      imageNumber: i
-      }));
+      imageCarousel.addEventListener("click", function() {
+        analytics.track('Clicked Carousel Image', { imageNumber: i });
+      });
     }
-
-
-
 });
