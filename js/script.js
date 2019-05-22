@@ -33,15 +33,15 @@ $(document).ready(function(){
 	  div: '.map',
 	  lat: 47.6827427,
 	  lng: 18.8103108,
-	  zoom: 12
+	  zoom: 15
 	});
 
 	map.addMarker({
-	  lat: 47.6827427,
-	  lng: 18.8103108,
-	  title: 'Hungary',
+	  lat: 47.682598,
+	  lng: 18.812602,
+	  title: 'Piliscsév',
 	  infoWindow: {
-		content: '<p>Hudecz Kő-Virág Kft Head Office</p>'
+		content: '<p>Hudecz Kő-Virág Kft Telephely</p>'
 	  }
 	});
 
